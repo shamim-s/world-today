@@ -1,4 +1,4 @@
-const loadCatagories = async() => {
+const loadCatagoriesData = async() => {
     const url = `https://openapi.programming-hero.com/api/news/categories`;
     try{
         const res = await fetch(url);
@@ -9,5 +9,4 @@ const loadCatagories = async() => {
         console.log(error);
     }
 }
-
-loadCatagories();
+loadCatagoriesData();
