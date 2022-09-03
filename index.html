@@ -11,14 +11,14 @@
     <!----------------- Font Awesome link  -------------------------------------->
     <script src="https://kit.fontawesome.com/2b79e71427.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="bg-light">
     <!---------------- Header Section  Start----------------------->
     <header>
         <section>
             <!------------ Navigation Bar Start------------------->
                 <nav class="navbar bg-light">
                     <div class="container-fluid">
-                    <a class="navbar-brand fs-4 fw-bold text-primary">Today's World</a>
+                    <a class="navbar-brand fs-4 fw-bold"><span class="bg-primary text-light p-2 rounded-2">Today's</span> <span class="text-primary">World</span></a>
                         <ul class="navbar-nav d-flex flex-row fw-bold">
                             <li class="nav-item me-4">
                             <a class="nav-link active text-primary" aria-current="page" href="#">News</a>
@@ -33,9 +33,25 @@
             <!------------ Navigation Bar End------------------->
         </section>
     </header>
+    <hr>
     <!---------------- Header Section  End----------------------->
-    <main>
-        <section>
+    <main class="px-4">
+        <section class="mb-3">
+            <div id="catagories-container" class="d-flex justify-content-around flex-wrap align-items-center">
+                
+            </div>
+        </section>
+
+        <section class="mb-4">
+            <div class="bg-white p-3 rounded-2">
+                <h5><span id="found-number">4</span> items found for category <span id="found-catagorie">Entertainment</span></h5>
+            </div>
+        </section>
+
+        <section class="mt-3">
+            <div id="news-container">
+                
+            </div>
         </section>
     </main>
     <!--------------- JavaScript Bundle with Popper------------------------------------->
