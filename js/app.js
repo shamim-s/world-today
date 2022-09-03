@@ -1,5 +1,3 @@
-
-
 // Load all catagory data ======================================================
 const loadCatagoriesData = async() => {
     const url = `https://openapi.programming-hero.com/api/news/categories`;
@@ -54,7 +52,7 @@ const loadNewsData = async(NewsCatagorie, name) => {
     }
 }
 
-// Default Load some news after enter website====================================
+// Default Load some news after enter website ====================================
 const laodDefaultNews = async() => {
     // start spinner 
     spinner(true);
@@ -85,7 +83,7 @@ const displayNewsCardDetails = details => {
     modalContainer.innerHTML = '';
 
     const modalContent = document.createElement('div');
-    modalContent.classList.add('modal-content');
+    modalContent.classList.add("modal-content", "shadow-sm");
 
     modalContent.innerHTML = `
     <div class="modal-header">
@@ -105,7 +103,7 @@ const displayNewsCardDetails = details => {
         </div>
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
     </div>
     `;
     modalContainer.appendChild(modalContent);

@@ -20,7 +20,7 @@ const displayNews = (newses, name) => {
 
     newses.forEach(news =>{
         const newsDiv = document.createElement('div');
-        newsDiv.classList.add("row", "gx-6","bg-white", "p-2", "rounded-2", "mt-4");
+        newsDiv.classList.add("row", "gx-6","bg-white", "p-2", "rounded-2", "mt-4", "shadow-sm");
         newsDiv.innerHTML = `
     <div class="col-md-4">
         <img src="${news.image_url}" alt="" class="img-fluid">
