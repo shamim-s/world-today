@@ -44,13 +44,35 @@
 
         <section class="mb-4">
             <div class="bg-white p-3 rounded-2">
-                <h5><span id="found-number">4</span> items found for category <span id="found-catagorie">Entertainment</span></h5>
+                <h5><span id="found-number" class="text-primary">4</span> items found for category <span id="found-catagorie" class="text-primary">Entertainment</span></h5>
             </div>
         </section>
 
         <section class="mt-3">
+            <!-- no news found massage  -->
+            <h4 id="no-news-found-massage" class="text-center text-danger mt-5 d-none">No News found</h4>
+            <!-- Loading spinner  -->
+            <div id="spinner" class="text-center d-none">
+                <div class="spinner-border" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </div>
+            <!-- all news div  -->
             <div id="news-container">
                 
+            </div>
+        </section>
+        <section>
+            <!-- Button trigger modal -->
+            <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Launch demo modal
+            </button> -->
+            
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div id="modal-dialog" class="modal-dialog">
+
+                </div>
             </div>
         </section>
     </main>
