@@ -1,6 +1,6 @@
 const displayNews = (newses, name) => {
-    // console.log(newses);
     const newsContainer = document.getElementById('news-container');
+    newsContainer.innerHTML = '';
 
     // set news quntity number each catagory
     const foundNewsNumber = document.getElementById('found-number');
@@ -10,15 +10,13 @@ const displayNews = (newses, name) => {
     const foundCatagory = document.getElementById('found-catagorie');
     foundCatagory.innerText =` ${name}`;
 
-    // No News found massage 
+    // If No News found display a massage 
     const notFoundMassage = document.getElementById('no-news-found-massage');
     if(newses.length === 0){
         notFoundMassage.classList.remove('d-none');
     }else{
         notFoundMassage.classList.add('d-none');
     }
-
-    newsContainer.innerHTML = '';
 
     newses.forEach(news =>{
         const newsDiv = document.createElement('div');

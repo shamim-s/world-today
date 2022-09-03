@@ -81,10 +81,9 @@ const loadNewsCardDetails = (news_id) => {
 
 // Display news card full details =====================================================
 const displayNewsCardDetails = details => {
-    console.log(details);
-
     const modalContainer = document.getElementById('modal-dialog');
     modalContainer.innerHTML = '';
+
     const modalContent = document.createElement('div');
     modalContent.classList.add('modal-content');
 
@@ -99,10 +98,10 @@ const displayNewsCardDetails = details => {
         </div>
         <hr>
         <div class="bg-secondary p-2 text-white">
-            <h6>Author: ${details.author?.name ?? "N/A"}</h6>
-            <p>Published: ${details.author?.published_date ?? "N/A"}</p>
-            <p>View: ${details?.total_view?? "N/A"}</p>
-            <p>Rating: ${details.rating?.badge ?? "N/A"}</p>
+            <h6>Author: ${details.author?.name ?? "no data found"}</h6>
+            <p>Published: ${details.author?.published_date ?? "no data found"}</p>
+            <p>View: ${details?.total_view?? "no data found"}</p>
+            <p>Rating: ${details.rating?.badge ?? "no data found"}</p>
         </div>
     </div>
     <div class="modal-footer">
