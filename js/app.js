@@ -144,7 +144,16 @@ const displayNewsCardDetails = details => {
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
     <div class="modal-body">
-        <p>${details.details}</p>
+        <div>
+            <p>${details.details}</p>
+        </div>
+        <hr>
+        <div class="bg-secondary p-2 text-white">
+            <h6>Author: ${details.author?.name ?? "No data found"}</h6>
+            <p>Published: ${details.author?.published_date ?? "No data found"}</p>
+            <p>View: ${details?.total_view?? "No data found"}</p>
+            <p>Rating: ${details.rating?.badge ?? "No data found"}</p>
+        </div>
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
