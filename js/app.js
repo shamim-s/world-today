@@ -1,3 +1,5 @@
+
+
 // Load all catagory data ======================================================
 const loadCatagoriesData = async() => {
     const url = `https://openapi.programming-hero.com/api/news/categories`;
@@ -97,10 +99,10 @@ const displayNewsCardDetails = details => {
         </div>
         <hr>
         <div class="bg-secondary p-2 text-white">
-            <h6>Author: ${details.author?.name ?? "No data found"}</h6>
-            <p>Published: ${details.author?.published_date ?? "No data found"}</p>
-            <p>View: ${details?.total_view?? "No data found"}</p>
-            <p>Rating: ${details.rating?.badge ?? "No data found"}</p>
+            <h6>Author: ${details.author?.name ?? "N/A"}</h6>
+            <p>Published: ${details.author?.published_date ?? "N/A"}</p>
+            <p>View: ${details?.total_view?? "N/A"}</p>
+            <p>Rating: ${details.rating?.badge ?? "N/A"}</p>
         </div>
     </div>
     <div class="modal-footer">
@@ -111,3 +113,18 @@ const displayNewsCardDetails = details => {
 }
 
 loadCatagoriesData();
+
+// for Blog page Accordian ===============================================
+document.getElementById('blog-btn').addEventListener('click', function(){
+    const catagoriesContainer = document.getElementById('catagories-container');
+    catagoriesContainer.innerHTML = '';
+
+    const newsContainer = document.getElementById('news-container');
+    newsContainer.innerHTML = '';
+
+    const accordian =document.getElementById('accordian');
+    accordian.classList.remove('d-none');
+
+    const label = document.getElementById('label');
+    label.classList.add('d-none');
+})

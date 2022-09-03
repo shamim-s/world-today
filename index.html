@@ -21,10 +21,10 @@
                     <a class="navbar-brand fs-4 fw-bold"><span class="bg-primary text-light p-2 rounded-2">Today's</span> <span class="text-primary">World</span></a>
                         <ul class="navbar-nav d-flex flex-row fw-bold">
                             <li class="nav-item me-4">
-                            <a class="nav-link active text-primary" aria-current="page" href="#">News</a>
+                            <a id="news-btn" class="nav-link active text-primary" aria-current="page" href="">News</a>
                             </li>
                             <li class="nav-item me-4">
-                            <a class="nav-link" href="#">Blog</a>
+                            <a id="blog-btn" class="nav-link" href="#">Blog</a>
                             </li>
                         </ul>
                         <i class="fa-solid fa-user fs-4"></i>
@@ -42,7 +42,7 @@
             </div>
         </section>
 
-        <section class="mb-4">
+        <section id="label" class="mb-4">
             <div class="bg-white p-3 rounded-2">
                 <h5><span id="found-number" class="text-primary">4</span> items found for category <span id="found-catagorie" class="text-primary">Entertainment</span></h5>
             </div>
@@ -74,6 +74,60 @@
 
                 </div>
             </div>
+        </section>
+
+        <!-- Blog section  Accordian-->
+        <section id="accordian" class="d-none">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                       1. Difference between var, let, and const
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">var is function-scoped while let and const are block-scoped. var variables can be reassigned while let and const variables can not. var variables are declared using the var keyword while let and const variables are declared using the let and const keywords respectively. const variables are immutable while let and var variables are not.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        2. Difference between arrow function and regular function
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Since regular functions are constructible, they can be called using the new keyword. However, the arrow functions are only callable and not constructible, i.e arrow functions can never be used as constructor functions. Hence, they can never be invoked with the new keyword.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        3. Difference between map(), forEach(), filter() and find()
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        1 .forEach(), is used to execute the same code on every element in an array but does not change the array and it returns undefined. <br>
+
+                        2 .map() executes the same code on every element in an array and returns a new array with the updated elements <br>
+
+                        3 .filter() checks every element in an array to see if it meets a certain criteria and returns a new array with the elements that return truthy for the criteria. <br>
+
+                        4 The find() method returns the first element in the provided array that satisfies the provided testing function. If no values satisfy the testing function, undefined is returned.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFour">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                          4. Why should use Template literals?
+                      </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Template literals are sometimes informally called template strings, because they are used most commonly for string interpolation (to create strings by doing substitution of placeholders). However, a tagged template literal may not result in a string; it can be used with a custom tag function to perform whatever operations you want on the different parts of the template literal.</div>
+                    </div>
+                  </div>
+              </div>
         </section>
     </main>
     <!--------------- JavaScript Bundle with Popper------------------------------------->

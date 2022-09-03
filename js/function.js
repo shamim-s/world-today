@@ -34,7 +34,7 @@ const displayNews = (newses, name) => {
         <div class="d-md-flex justify-content-between align-items-center">
             <div class="w-25 d-flex">
                 <div class="w-25 me-2">
-                    <img src="${news.author.img}" alt="" class="img-fluid rounded-5">
+                    <img src="${news.author.img}" alt="" class="img-fluid rounded-5 d-md-block d-lg-block d-none">
                 </div>
                 <div>
                     <h6 class="text-nowrap text-truncate">${news.author?.name ?? "No data found"}</h6>
