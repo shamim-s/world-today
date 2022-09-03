@@ -78,23 +78,24 @@ const displayNews = (newses, name) => {
         const newsDiv = document.createElement('div');
         newsDiv.classList.add("row", "gx-6","bg-white", "p-2", "rounded-2", "mt-4");
         newsDiv.innerHTML = `
-    <div class="col-sm-12 col-md-4">
+    <div class="col-md-4">
         <img src="${news.image_url}" alt="" class="img-fluid">
     </div>
-    <div class="col-sm-12 col-md-8"> 
+    <div class="col-md-8"> 
         <h3>${news.title}</h3>
+        <p class="text-truncate mb-4">${news.details}</p>
 
-        <p class="text-truncate">${news.details}</p>
-
-        <div class="d-flex justify-content-center align-items-center">
-            <div class="w-25 d-flex justify-content-center align-items-center">
-                <img src="${news.author.img}" alt="" class="img-fluid w-25 rounded-5">
-                <div class="">
-                    <h6>${news.author?.name ?? "No data found"}</h6>
-                    <p>${news.author?.published_date ?? "No data found"}</p>
+        <div class="d-md-flex justify-content-between align-items-center">
+            <div class="w-25 d-flex">
+                <div class="w-25 me-2">
+                    <img src="${news.author.img}" alt="" class="img-fluid rounded-5">
+                </div>
+                <div>
+                    <h6 class="text-nowrap text-truncate">${news.author?.name ?? "No data found"}</h6>
+                    <p class="d-none d-md-block d-lg-block">${news.author?.published_date ?? "No data found"}</p>
                 </div>
             </div> 
-            <div class="ms-5 w-75 d-flex justify-content-around align-items-center">
+            <div class="w-75 d-flex justify-content-around align-items-center">
                 <span><i class="fa-regular fa-eye"></i> ${news?.total_view ?? "No data found"}</span>
                 <span>
                     <i class="fa-solid fa-star"></i>
@@ -110,6 +111,7 @@ const displayNews = (newses, name) => {
             </div>
         </div>
     </div>
+
         `;
         newsContainer.appendChild(newsDiv);
     });
